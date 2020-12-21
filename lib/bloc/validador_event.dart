@@ -1,8 +1,9 @@
 part of 'validador_bloc.dart';
 
-abstract class ValidadorEvent extends Equatable {
-  const ValidadorEvent();
+class ValidadorEvent extends Equatable {
+  final String value;
+  const ValidadorEvent(this.value);
 
   @override
-  List<Object> get props => [];
+  List<Object> get props => [value];
 }
