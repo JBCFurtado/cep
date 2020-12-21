@@ -1,10 +1,10 @@
 part of 'validador_bloc.dart';
 
-abstract class ValidadorState extends Equatable {
-  const ValidadorState();
+enum Validador{inicial, incompleto, completo, desconhecido}
+class ValidadorState extends Equatable {
+  final Validador validador;
+  const ValidadorState(this.validador);
   
   @override
-  List<Object> get props => [];
+  List<Object> get props => [validador];
 }
-
-class ValidadorInitial extends ValidadorState {}
